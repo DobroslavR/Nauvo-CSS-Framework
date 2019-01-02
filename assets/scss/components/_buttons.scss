@@ -1,0 +1,44 @@
+//
+// Base styles
+//
+
+.btn {
+  display: inline-block;
+  font-family: $btn-font-family;
+  font-weight: $btn-font-weight;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: $btn-border-width solid transparent;
+  @include button-size;
+  transition: $btn-transition;
+  text-transform: uppercase;
+
+  /* &:focus,
+	&.focus {
+		outline: 0;
+		box-shadow: $btn-focus-box-shadow;
+	} */
+
+  // Disabled comes first so active can properly restyle
+  /* 	&.disabled,
+	&:disabled {
+		opacity: $btn-disabled-opacity;
+		@include box-shadow(none);
+	}
+
+	// Opinionated: add "hand" cursor to non-disabled .btn elements
+	&:not(:disabled):not(.disabled) {
+		cursor: pointer;
+	}
+
+	&:not(:disabled):not(.disabled):active,
+	&:not(:disabled):not(.disabled).active {
+		@include box-shadow($btn-active-box-shadow);
+
+		&:focus {
+			@include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+		}
+	} */
+}

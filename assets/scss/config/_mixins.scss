@@ -1,0 +1,9 @@
+//
+// Button size mixin
+//
+
+@mixin button-size {
+	padding: $btn-padding-y $btn-padding-x;
+	font-size: $btn-font-size;
+	line-height: $btn-line-height;
+}
