@@ -2,14 +2,22 @@
 // Buttons settings
 //
 
+// Button sizes
+
 $btn-padding-y: em(55) !default;
 $btn-padding-x: em(16) !default;
 $btn-line-height: 1.3 !default;
-$btn-font-size: rem(12) !default;
 
+// Button font settings
+
+$btn-font-size: rem(12) !default;
 $btn-font-family: 'Lato' !default;
 $btn-font-weight: 700 !default;
 
+// Button border
+
 $btn-border-width: em(2) !default;
+
+// Button animation
 
 $btn-transition: all 0.15s ease-in-out !default;

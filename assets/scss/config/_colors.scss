@@ -2,24 +2,15 @@
 // ------------------
 // For styling buttons
 
+$btn-variant-bg-text-color: #ffffff;
+
 $button-colors: (
-	"red": #ff5063,
-	"pink": #e2548d,
-	"grey": #9cb1bc,
-	"green": #00b06c,
-	"black": #122748,
-	"purple": #7740a2
-);
-
-// Button hover colors
-
-$button-colors--hover: (
-	"purple": #9157bf,
-	"pink": #ea70a1,
-	"green": #18cc86,
-	"grey": #8493a7,
-	"black": #3c4259,
-	"red": #ff6b7b
+	'red': #ff5063,
+	'pink': #e2548d,
+	'grey': #9cb1bc,
+	'green': #00b06c,
+	'black': #122748,
+	'purple': #7740a2
 );
 
 // Alert colors
@@ -27,18 +18,17 @@ $button-colors--hover: (
 // For styling alerts
 
 $alert-colors: (
-	"success": #00b06c,
-	"warning": #f69d35,
-	"error": #ff5063,
-	"info": #13b5ea
+	'success': #00b06c,
+	'warning': #f69d35,
+	'error': #ff5063,
+	'info': #13b5ea
 );
 
 // Alert light colors
 
 $alert-colors--light: (
-	"success": #c9ffe5,
-	"warning": #fff0cc,
-	"error": #ffdbdb,
-	"info": #c9f2ff
+	'success': #c9ffe5,
+	'warning': #fff0cc,
+	'error': #ffdbdb,
+	'info': #c9f2ff
 );
-
