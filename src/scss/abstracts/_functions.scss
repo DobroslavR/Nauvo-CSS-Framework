@@ -10,9 +10,9 @@
 	$yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
 
 	@if ($yiq >= 150) {
-		@return #000000;
+		@return $color-text-dark;
 	} @else {
-		@return #ffffff;
+		@return $color-text-light;
 	}
 }
 
@@ -20,7 +20,7 @@
 //
 // Change px unit to em unit
 
-@function PxToEm($pixels, $context) {
+@function PxToEm($pixels, $context: 16) {
 	@return ($pixels / $context) + em;
 }
 
@@ -28,6 +28,6 @@
 //
 // Change PX unit to REM unit
 
-@function PxToRem($pixels, $context: $font-size-default) {
+@function PxToRem($pixels, $context: 10) {
 	@return ($pixels / $context) + rem;
 }

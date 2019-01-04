@@ -8,12 +8,11 @@
 	$hover-background: lighten($background, 7.5%),
 	$hover-border: lighten($border, 10%)
 ) {
-	color: color-yiq($background);
+	color: #ffffff;
 	background: $background;
 	border-color: $border;
 
-	@include btn-hover {
-		color: color-yiq($hover-background);
+	&:hover {
 		background: $hover-background;
 		border-color: $hover-background;
 	}
@@ -22,24 +21,14 @@
 @mixin button-variant-outline(
 	$color,
 	$hover-background: $color,
-	$color-hover: color-yiq($hover-background)
+	$hover-color: color-yiq($hover-background)
 ) {
 	color: $color;
 	border-color: $color;
 
-	@include btn-hover {
-		color: $color-hover;
-		background: $hover-background;
-	}
-}
-
-// Button hover mixin
-//
-// Change properties on hover
-
-@mixin btn-hover {
 	&:hover {
-		@content;
+		color: $hover-color;
+		background: $hover-background;
 	}
 }
 
@@ -48,7 +37,8 @@
 //
 
 @mixin button-size {
-	padding: $btn-padding-y $btn-padding-x;
-	font-size: $btn-font-size;
+	padding: PxToEm($btn-padding-y, $btn-font-size)
+		PxToEm($btn-padding-x, $btn-font-size);
+	font-size: PxToRem($btn-font-size);
 	line-height: $btn-line-height;
 }

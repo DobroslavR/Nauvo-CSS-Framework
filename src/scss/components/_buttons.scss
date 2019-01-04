@@ -10,10 +10,18 @@
 	vertical-align: middle;
 	user-select: none;
 	background-color: transparent;
-	border: $btn-border-width solid transparent;
+	border: PxToEm($btn-border-width, $btn-font-size) solid transparent;
 	@include button-size;
 	transition: $btn-transition;
 	text-transform: uppercase;
+
+	&--rounded-sm {
+		border-radius: PxToEm($btn-border-radius-sm, $btn-font-size);
+	}
+
+	&--rounded-lg {
+		border-radius: PxToEm($btn-border-radius-lg, $btn-font-size);
+	}
 
 	/* &:focus,
 	&.focus {
