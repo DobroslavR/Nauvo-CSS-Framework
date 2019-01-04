@@ -18,16 +18,12 @@
 	}
 }
 
-@mixin button-variant-outline(
-	$color,
-	$hover-background: $color,
-	$hover-color: color-yiq($hover-background)
-) {
+@mixin button-variant-outline($color, $hover-background: $color) {
 	color: $color;
 	border-color: $color;
 
 	&:hover {
-		color: $hover-color;
+		color: #ffffff;
 		background: $hover-background;
 	}
 }
