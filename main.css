@@ -199,6 +199,9 @@ html {
     border-radius: 0.41667em; }
   .btn--rounded-lg {
     border-radius: 8.33333em; }
+  .btn__icon {
+    margin-right: 1.66667em;
+    margin-left: -1.66667em; }
 
 .btn--red {
   color: #ffffff;
@@ -319,3 +322,46 @@ html {
   .btn--outline-yellow:hover {
     color: #758db0;
     background: #f69d35; }
+
+.btn--facebook {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  background: #2a66b3;
+  letter-spacing: 0.16667em; }
+  .btn--facebook:hover {
+    background: #3478cf; }
+
+.btn--twitter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  background: #35bbec;
+  letter-spacing: 0.16667em; }
+  .btn--twitter:hover {
+    background: #58c7ef; }
+
+.btn--google {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  background: #e55644;
+  letter-spacing: 0.16667em; }
+  .btn--google:hover {
+    background: #ea7466; }
+
+.btn__icon {
+  margin-right: 20px;
+  margin-left: -20px; }

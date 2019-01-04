@@ -19,6 +19,12 @@ $color-facebook: #2a66b3 !default;
 $color-twitter: #35bbec !default;
 $color-google: #e55644 !default;
 
+$social-colors: (
+	'facebook': $color-facebook,
+	'twitter': $color-twitter,
+	'google': $color-google
+);
+
 // Typography colors
 // ------------------
 // Colors for styling text

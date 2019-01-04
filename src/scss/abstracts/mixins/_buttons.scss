@@ -32,6 +32,21 @@
 	}
 }
 
+@mixin button-variant-social(
+	$background,
+	$hover-background: lighten($background, 7.5%)
+) {
+	display: flex;
+	align-items: center;
+	color: #ffffff;
+	background: $background;
+	letter-spacing: PxToEm(2, $btn-font-size);
+
+	&:hover {
+		background: $hover-background;
+	}
+}
+
 //
 // Button size mixin
 //

@@ -23,6 +23,11 @@
 		border-radius: PxToEm($btn-border-radius-lg, $btn-font-size);
 	}
 
+	&__icon {
+		margin-right: PxToEm(20, $btn-font-size);
+		margin-left: PxToEm(-20, $btn-font-size);
+	}
+
 	/* &:focus,
 	&.focus {
 		outline: 0;
@@ -51,6 +56,10 @@
 	} */
 }
 
+// Button variants creation
+//
+// Loops which create button variants css selectors
+
 @each $color, $value in $button-colors {
 	.btn--#{$color} {
 		@include button-variant-bg($value, $value);
@@ -61,4 +70,19 @@
 	.btn--outline-#{$color} {
 		@include button-variant-outline($value);
 	}
+}
+
+// Social buttons
+//
+// Loops which create social buttons css selectors
+
+@each $social-name, $value in $social-colors {
+	.btn--#{$social-name} {
+		@include button-variant-social($value);
+	}
+}
+
+.btn__icon {
+	margin-right: 20px;
+	margin-left: -20px;
 }
