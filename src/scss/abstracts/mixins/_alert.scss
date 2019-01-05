@@ -1,0 +1,21 @@
+// Alert variants
+//
+//
+
+@mixin alert-variant-normal(
+	$background,
+	$hover-background: lighten($background, 5%)
+) {
+	color: #ffffff;
+	background: $background;
+
+	&:hover {
+		background: $hover-background;
+	}
+}
+
+@mixin alert-variant-light($color, $background) {
+	color: $color;
+	background: $background;
+	border: PxToEm(2, $alert-text-font-size) solid $color;
+}

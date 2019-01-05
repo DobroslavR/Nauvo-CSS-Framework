@@ -1,0 +1,44 @@
+//
+// Alert settings
+//
+
+// Alert spacing
+//
+//
+
+$alert-padding-y: 30 !default;
+$alert-padding-x: 30 !default;
+
+// Alert border settings
+//
+//
+
+$alert-border-radius: 5 !default;
+
+// Alert text font settings
+//
+//
+
+$alert-text-font-size: 12 !default;
+$alert-font-family: 'Lato' !default;
+$alert-text-font-weight: 700 !default;
+$alert-text-line-height: 1.3 !default;
+$alert-text-letter-spacing: 2 !default;
+
+// Alert transition settings
+//
+//
+
+$alert-transition: all 0.15s ease-in-out !default;
+
+// Alert link font settings
+//
+//
+
+$alert-link-font-weight: 700 !default;
+
+// Alert close icon settings
+//
+//
+
+$alert-close-icon-font-size: 12;

@@ -1,5 +1,5 @@
 //
-// Base styles
+// Button default settings
 //
 
 .btn {
@@ -80,9 +80,4 @@
 	.btn--#{$social-name} {
 		@include button-variant-social($value);
 	}
-}
-
-.btn__icon {
-	margin-right: 20px;
-	margin-left: -20px;
 }

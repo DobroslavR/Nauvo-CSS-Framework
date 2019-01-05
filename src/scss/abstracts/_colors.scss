@@ -51,7 +51,7 @@ $button-colors: (
 // ------------------
 // For styling alerts
 
-$alert-colors: (
+$alert-colors-normal: (
 	'success': $color-green,
 	'warning': $color-yellow,
 	'error': $color-red,
@@ -60,7 +60,7 @@ $alert-colors: (
 
 // Alert light colors
 
-$alert-colors--light: (
+$alert-colors-light: (
 	'success': #c9ffe5,
 	'warning': #fff0cc,
 	'error': #ffdbdb,

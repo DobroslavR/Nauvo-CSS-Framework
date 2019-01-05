@@ -1,0 +1,51 @@
+//
+// Alert default settings
+//
+
+.alert {
+	width: 100%;
+	padding: PxToEm($alert-padding-y) PxToEm($alert-padding-x);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: $alert-text-font-weight;
+	font-family: $alert-font-family;
+	border-radius: PxToEm($alert-border-radius);
+	text-transform: uppercase;
+	transition: $alert-transition;
+
+	&__text {
+		font-size: PxToRem($alert-text-font-size);
+		line-height: $alert-text-line-height;
+		letter-spacing: PxToEm($alert-text-letter-spacing);
+	}
+
+	&__link {
+		font-weight: $alert-link-font-weight;
+		text-decoration: underline;
+	}
+
+	&__close {
+		color: inherit;
+		cursor: pointer;
+		font-size: PxToRem($alert-close-icon-font-size);
+	}
+}
+
+// Alert variants creation
+//
+// Loop which creates normal alert variants
+
+@each $type, $value in $alert-colors-normal {
+	.alert--#{$type} {
+		@include alert-variant-normal($value);
+	}
+}
+
+@each $type, $normalColor in $alert-colors-normal {
+	$i: index(map-keys($alert-colors-normal), $type);
+	$lightColor: map-get($alert-colors-light, $type);
+	.alert--#{$type}-light {
+		@include alert-variant-light($normalColor, $lightColor);
+	}
+}
