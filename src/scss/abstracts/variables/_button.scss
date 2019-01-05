@@ -6,8 +6,12 @@
 //
 // Sizes for basic button variants
 
-$btn-padding-y: 16 !default;
-$btn-padding-x: 55 !default;
+$btn-padding-y-large: 16 !default;
+$btn-padding-x-large: 55 !default;
+
+$btn-padding-y-small: 15 !default;
+$btn-padding-x-small: 20 !default;
+
 $btn-line-height: 1.3 !default;
 
 // Button font settings

@@ -156,6 +156,8 @@ html {
   display: inline-block;
   font-family: "Lato";
   font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.3;
   text-align: center;
   vertical-align: middle;
   -webkit-user-select: none;
@@ -164,9 +166,6 @@ html {
   user-select: none;
   background-color: transparent;
   border: 0.16667em solid transparent;
-  padding: 1.33333em 4.58333em;
-  font-size: 1.2rem;
-  line-height: 1.3;
   -webkit-transition: all 0.15s ease-in-out;
   -o-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
@@ -195,6 +194,10 @@ html {
 			@include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
 		}
 	} */ }
+  .btn--sm {
+    padding: 1.25em 1.66667em; }
+  .btn--lg {
+    padding: 1.33333em 4.58333em; }
   .btn--rounded-sm {
     border-radius: 0.41667em; }
   .btn--rounded-lg {
@@ -332,7 +335,8 @@ html {
   align-items: center;
   color: #ffffff;
   background: #2a66b3;
-  letter-spacing: 0.16667em; }
+  letter-spacing: 0.16667em;
+  padding: 1.33333em 4.58333em; }
   .btn--facebook:hover {
     background: #3478cf; }
 
@@ -345,7 +349,8 @@ html {
   align-items: center;
   color: #ffffff;
   background: #35bbec;
-  letter-spacing: 0.16667em; }
+  letter-spacing: 0.16667em;
+  padding: 1.33333em 4.58333em; }
   .btn--twitter:hover {
     background: #58c7ef; }
 
@@ -358,7 +363,8 @@ html {
   align-items: center;
   color: #ffffff;
   background: #e55644;
-  letter-spacing: 0.16667em; }
+  letter-spacing: 0.16667em;
+  padding: 1.33333em 4.58333em; }
   .btn--google:hover {
     background: #ea7466; }
 

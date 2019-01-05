@@ -37,6 +37,7 @@
 	color: #ffffff;
 	background: $background;
 	letter-spacing: PxToEm(2, $btn-font-size);
+	@include button-size-lg;
 
 	&:hover {
 		background: $hover-background;
@@ -47,9 +48,12 @@
 // Button size mixin
 //
 
-@mixin button-size {
-	padding: PxToEm($btn-padding-y, $btn-font-size)
-		PxToEm($btn-padding-x, $btn-font-size);
-	font-size: PxToRem($btn-font-size);
-	line-height: $btn-line-height;
+@mixin button-size-lg {
+	padding: PxToEm($btn-padding-y-large, $btn-font-size)
+		PxToEm($btn-padding-x-large, $btn-font-size);
+}
+
+@mixin button-size-sm {
+	padding: PxToEm($btn-padding-y-small, $btn-font-size)
+		PxToEm($btn-padding-x-small, $btn-font-size);
 }
