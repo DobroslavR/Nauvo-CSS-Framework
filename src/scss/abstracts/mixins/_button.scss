@@ -19,8 +19,13 @@
 }
 
 @mixin button-variant-outline($color, $hover-background: $color) {
-	color: $color;
 	border-color: $color;
+
+	@if ($color == $color-black) {
+		$color: #758db0;
+	}
+
+	color: $color;
 
 	&:hover {
 		color: #ffffff;

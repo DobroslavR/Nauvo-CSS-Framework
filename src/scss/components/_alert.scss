@@ -9,7 +9,7 @@
 	justify-content: space-between;
 	align-items: center;
 	font-weight: $alert-text-font-weight;
-	font-family: $alert-font-family;
+	font-family: $alert-text-font-family;
 	border-radius: PxToEm($alert-border-radius);
 	text-transform: uppercase;
 	transition: $alert-transition;

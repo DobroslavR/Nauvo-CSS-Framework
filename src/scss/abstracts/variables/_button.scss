@@ -1,10 +1,35 @@
 //
-// Buttons settings
+// Button settings
 //
 
-// Basic button sizes
+// Button colors
 //
-// Sizes for basic button variants
+// Colors for styling buttons
+
+// Social button colors
+
+$social-button-colors: (
+	'facebook': $color--facebook,
+	'twitter': $color--twitter,
+	'google': $color--google
+);
+
+// Basic button colors
+
+$button-colors: (
+	'red': $color-red,
+	'pink': $color-pink,
+	'grey': $color-grey,
+	'green': $color-green,
+	'black': $color-black,
+	'purple': $color-purple,
+	'blue': #13b5ea,
+	'yellow': #f69d35
+);
+
+// Button - sizes
+//
+// Sizes for basic buttons
 
 $btn-padding-y-large: 16 !default;
 $btn-padding-x-large: 55 !default;
@@ -14,18 +39,18 @@ $btn-padding-x-small: 20 !default;
 
 $btn-line-height: 1.3 !default;
 
-// Button font settings
+// Button - font settings
 
 $btn-font-size: 12 !default;
 $btn-font-family: 'Lato' !default;
 $btn-font-weight: 700 !default;
 
-// Button border
+// Button - border
 
 $btn-border-width: 2 !default;
 $btn-border-radius-sm: 5 !default;
 $btn-border-radius-lg: 100 !default;
 
-// Button animation
+// Button - animation
 
 $btn-transition: all 0.15s ease-in-out !default;

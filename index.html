@@ -15,11 +15,57 @@
 			integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
 			crossorigin="anonymous"
 		/>
-		<link rel="stylesheet" href="main.css" />
+		<link rel="stylesheet" href="src/scss/main.css" />
 	</head>
 	<body>
 		<div class="container-100">
 			<div class="container">
+				<form>
+					<!-- Gender -->
+					<p>You are a...</p>
+					<input type="radio" id="male" name="gender" />
+					<label for="male">Male</label><br />
+					<input type="radio" id="female" name="gender" />
+					<label for="female">Female</label>
+
+					<!-- Interests -->
+					<p>Who is interested in...</p>
+					<input type="checkbox" id="web" />
+					<label for="web">Web development</label><br />
+					<input type="checkbox" id="photoshop" />
+					<label for="photoshop">Photoshop</label><br />
+					<input type="checkbox" id="madona" />
+					<label for="madona">Singing Madona Songs</label>
+
+					<!-- Contact details -->
+					<fieldset>
+						<input
+							class="form__input-text space"
+							type="email"
+							placeholder="Email"
+							required
+						/>
+						<span class="tick"></span>
+						<input
+							class="form__input-text space"
+							type="tel"
+							placeholder="Phone number"
+							required
+						/>
+						<span class="tick"></span>
+					</fieldset>
+					<!-- Preferred -->
+					<p>How would you like to be contacted?</p>
+					<select>
+						<option>By email</option>
+						<option>By telephone</option>
+					</select>
+					<input
+						class="btn btn--sm btn--red btn--rounded-sm space"
+						type="submit"
+						value="Become a Ninja"
+					/>
+				</form>
 				<div class="alert alert--success space">
 					<span class="alert__text">Success!</span>
 					<span class="alert__close">X</span>
@@ -336,6 +382,11 @@
 					class="btn btn--outline-grey btn--lg btn--rounded-lg space"
 					>Hello world</a
 				>
+				<button
+					class="btn btn--outline-grey btn--lg btn--rounded-lg space"
+				>
+					Button
+				</button>
 			</div>
 		</div>
 	</body>

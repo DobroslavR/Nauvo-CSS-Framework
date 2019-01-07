@@ -1,0 +1,30 @@
+// Form mixins
+//
+//
+
+// Form input text - sizes
+
+@mixin form-input-text-size {
+	padding: PxToEm($form-input-text--padding-y, $form-input-text--font-size)
+		PxToEm($form-input-text--padding-x, $form-input-text--font-size);
+}
+
+// Form input text - font settings
+
+@mixin form-input-text-font {
+	font-family: $form-input-text--font-family;
+	font-size: PxToRem($form-input-text--font-size);
+	font-weight: $form-input-text--font-weight;
+	color: $form-input-text--text-color;
+}
+
+// Form input text - border settings
+
+@mixin form-input-text-border {
+	border: PxToEm($form-input-text--border-size, $form-input-text--font-size)
+		solid $form-input-text--border-color;
+	border-radius: PxToEm(
+		$form-input-text--border-radius,
+		$form-input-text--font-size
+	);
+}

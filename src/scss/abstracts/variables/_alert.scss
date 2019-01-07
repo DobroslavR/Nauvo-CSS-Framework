@@ -2,25 +2,45 @@
 // Alert settings
 //
 
-// Alert spacing
+// Alert colors
 //
+// Colors for styling alerts
+
+// Alert - normal colors
+
+$alert-colors-normal: (
+	'success': $color-green,
+	'warning': $color-yellow,
+	'error': $color-red,
+	'info': $color-blue
+);
+
+// Alert - light colors
+
+$alert-colors-light: (
+	'success': #c9ffe5,
+	'warning': #fff0cc,
+	'error': #ffdbdb,
+	'info': #c9f2ff
+);
+
+// Alert other settings
 //
+// Settings for all alerts
+
+// Alert - size settings
 
 $alert-padding-y: 30 !default;
 $alert-padding-x: 30 !default;
 
-// Alert border settings
-//
-//
+// Alert - border settings
 
 $alert-border-radius: 5 !default;
 
-// Alert text font settings
-//
-//
+// Alert - text settings
 
 $alert-text-font-size: 12 !default;
-$alert-font-family: 'Lato' !default;
+$alert-text-font-family: 'Lato' !default;
 $alert-text-font-weight: 700 !default;
 $alert-text-line-height: 1.3 !default;
 $alert-text-letter-spacing: 2 !default;
@@ -41,4 +61,4 @@ $alert-link-font-weight: 700 !default;
 //
 //
 
-$alert-close-icon-font-size: 12;
+$alert-close-icon-font-size: 12 !default;

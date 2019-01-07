@@ -1,0 +1,649 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ----------------------------------------------------------------------------------------------------
+
+Super Form Reset
+
+A couple of things to watch out for:
+
+- IE8: If a text input doesn't have padding on all sides or none the text won't be centered.
+- The default border sizes on text inputs in all UAs seem to be slightly different. You're better off using custom borders.
+- You NEED to set the font-size and family on all form elements
+- Search inputs need to have their appearance reset and the box-sizing set to content-box to match other UAs
+- You can style the upload button in webkit using ::-webkit-file-upload-button
+- ::-webkit-file-upload-button selectors can't be used in the same selector as normal ones. FF and IE freak out.
+- IE: You don't need to fake inline-block with labels and form controls in IE. They function as inline-block.
+- By turning off ::-webkit-search-decoration, it removes the extra whitespace on the left on search inputs
+
+----------------------------------------------------------------------------------------------------*/
+/* input,
+label,
+select,
+button,
+textarea {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	display: inline-block;
+	vertical-align: middle;
+	white-space: normal;
+	background: none;
+	line-height: 1;
+} */
+/* Button Controls
+-----------------------------------------------*/
+input[type='checkbox'],
+input[type='radio'] {
+  width: 15px;
+  height: 15px;
+}
+
+/* File Uploads
+-----------------------------------------------*/
+/* Search Input
+-----------------------------------------------*/
+/* Make webkit render the search input like a normal text field */
+input[type='search'] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+}
+
+/* Turn off the recent search for webkit. It adds about 15px padding on the left */
+::-webkit-search-decoration {
+  display: none;
+}
+
+/* Buttons
+-----------------------------------------------*/
+button,
+input[type='reset'],
+input[type='button'],
+input[type='submit'] {
+  /* Fix IE7 display bug */
+  overflow: visible;
+  width: auto;
+}
+
+/* IE8 and FF freak out if this rule is within another selector */
+::-webkit-file-upload-button {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+/* Textarea
+-----------------------------------------------*/
+textarea {
+  /* Move the label to the top */
+  vertical-align: top;
+  /* Turn off scroll bars in IE unless needed */
+  overflow: auto;
+}
+
+/* Selects
+-----------------------------------------------*/
+select[multiple] {
+  /* Move the label to the top */
+  vertical-align: top;
+}
+
+html {
+  font-size: 10px;
+}
+
+.container-100 {
+  width: 100%;
+}
+
+.container {
+  padding: 1.5625em;
+  max-width: 73.125em;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.space {
+  margin: 10px;
+}
+
+body {
+  background: #0f1c2f;
+}
+
+.btn {
+  display: inline-block;
+  font-family: "Lato";
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: transparent;
+  border: 0.16667em solid transparent;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn--sm {
+  padding: 1.25em 1.66667em;
+}
+
+.btn--lg {
+  padding: 1.33333em 4.58333em;
+}
+
+.btn--rounded-sm {
+  border-radius: 0.41667em;
+}
+
+.btn--rounded-lg {
+  border-radius: 8.33333em;
+}
+
+.btn__icon {
+  margin-right: 1.66667em;
+  margin-left: -1.66667em;
+}
+
+.btn--red {
+  color: #ffffff;
+  background: #ff5063;
+  border-color: #ff5063;
+}
+
+.btn--red:hover {
+  background: #ff7685;
+  border-color: #ff7685;
+}
+
+.btn--pink {
+  color: #ffffff;
+  background: #e2548d;
+  border-color: #e2548d;
+}
+
+.btn--pink:hover {
+  background: #e875a3;
+  border-color: #e875a3;
+}
+
+.btn--grey {
+  color: #ffffff;
+  background: #718093;
+  border-color: #718093;
+}
+
+.btn--grey:hover {
+  background: #8793a4;
+  border-color: #8793a4;
+}
+
+.btn--green {
+  color: #ffffff;
+  background: #00b06c;
+  border-color: #00b06c;
+}
+
+.btn--green:hover {
+  background: #00d683;
+  border-color: #00d683;
+}
+
+.btn--black {
+  color: #ffffff;
+  background: #122748;
+  border-color: #122748;
+}
+
+.btn--black:hover {
+  background: #1a3867;
+  border-color: #1a3867;
+}
+
+.btn--purple {
+  color: #ffffff;
+  background: #7740a2;
+  border-color: #7740a2;
+}
+
+.btn--purple:hover {
+  background: #8b4fb9;
+  border-color: #8b4fb9;
+}
+
+.btn--blue {
+  color: #ffffff;
+  background: #13b5ea;
+  border-color: #13b5ea;
+}
+
+.btn--blue:hover {
+  background: #35c1ef;
+  border-color: #35c1ef;
+}
+
+.btn--yellow {
+  color: #ffffff;
+  background: #f69d35;
+  border-color: #f69d35;
+}
+
+.btn--yellow:hover {
+  background: #f8af5a;
+  border-color: #f8af5a;
+}
+
+.btn--outline-red {
+  border-color: #ff5063;
+  color: #ff5063;
+}
+
+.btn--outline-red:hover {
+  color: #ffffff;
+  background: #ff5063;
+}
+
+.btn--outline-pink {
+  border-color: #e2548d;
+  color: #e2548d;
+}
+
+.btn--outline-pink:hover {
+  color: #ffffff;
+  background: #e2548d;
+}
+
+.btn--outline-grey {
+  border-color: #718093;
+  color: #718093;
+}
+
+.btn--outline-grey:hover {
+  color: #ffffff;
+  background: #718093;
+}
+
+.btn--outline-green {
+  border-color: #00b06c;
+  color: #00b06c;
+}
+
+.btn--outline-green:hover {
+  color: #ffffff;
+  background: #00b06c;
+}
+
+.btn--outline-black {
+  border-color: #122748;
+  color: #758db0;
+}
+
+.btn--outline-black:hover {
+  color: #ffffff;
+  background: #122748;
+}
+
+.btn--outline-purple {
+  border-color: #7740a2;
+  color: #7740a2;
+}
+
+.btn--outline-purple:hover {
+  color: #ffffff;
+  background: #7740a2;
+}
+
+.btn--outline-blue {
+  border-color: #13b5ea;
+  color: #13b5ea;
+}
+
+.btn--outline-blue:hover {
+  color: #ffffff;
+  background: #13b5ea;
+}
+
+.btn--outline-yellow {
+  border-color: #f69d35;
+  color: #f69d35;
+}
+
+.btn--outline-yellow:hover {
+  color: #ffffff;
+  background: #f69d35;
+}
+
+.btn--facebook {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  background: #2a66b3;
+  letter-spacing: 0.16667em;
+  padding: 1.33333em 4.58333em;
+}
+
+.btn--facebook:hover {
+  background: #3478cf;
+}
+
+.btn--twitter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  background: #35bbec;
+  letter-spacing: 0.16667em;
+  padding: 1.33333em 4.58333em;
+}
+
+.btn--twitter:hover {
+  background: #58c7ef;
+}
+
+.btn--google {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  background: #e55644;
+  letter-spacing: 0.16667em;
+  padding: 1.33333em 4.58333em;
+}
+
+.btn--google:hover {
+  background: #ea7466;
+}
+
+.alert {
+  width: 100%;
+  padding: 1.875em 1.875em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  font-family: "Lato";
+  border-radius: 0.3125em;
+  text-transform: uppercase;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+.alert__text {
+  font-size: 1.2rem;
+  line-height: 1.3;
+  letter-spacing: 0.125em;
+}
+
+.alert__link {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.alert__close {
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.alert--success {
+  color: #ffffff;
+  background: #00b06c;
+}
+
+.alert--success:hover {
+  background: #00ca7c;
+}
+
+.alert--warning {
+  color: #ffffff;
+  background: #f69d35;
+}
+
+.alert--warning:hover {
+  background: #f7a94d;
+}
+
+.alert--error {
+  color: #ffffff;
+  background: #ff5063;
+}
+
+.alert--error:hover {
+  background: #ff6a7a;
+}
+
+.alert--info {
+  color: #ffffff;
+  background: #13b5ea;
+}
+
+.alert--info:hover {
+  background: #29bdee;
+}
+
+.alert--success-light {
+  color: #00b06c;
+  background: #c9ffe5;
+  border: 0.16667em solid #00b06c;
+}
+
+.alert--warning-light {
+  color: #f69d35;
+  background: #fff0cc;
+  border: 0.16667em solid #f69d35;
+}
+
+.alert--error-light {
+  color: #ff5063;
+  background: #ffdbdb;
+  border: 0.16667em solid #ff5063;
+}
+
+.alert--info-light {
+  color: #13b5ea;
+  background: #c9f2ff;
+  border: 0.16667em solid #13b5ea;
+}
+
+.form {
+  border-radius: 0.3125em;
+}
+
+.form__input-text {
+  padding: 0.66667em 1em;
+  font-family: "Open sans";
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #ffffff;
+  border: 0.16667em solid #122748;
+  border-radius: 0.41667em;
+  background: none;
+}
+
+.form__input-text:focus {
+  outline: 0;
+}
+
+.form__input-text::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.form__input-text:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.form__input-text::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.form__input-text::placeholder {
+  color: #ffffff;
+}
+/*# sourceMappingURL=main.css.map */

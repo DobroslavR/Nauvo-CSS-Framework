@@ -1,0 +1,23 @@
+//
+// Form default settings
+//
+
+.form {
+	border-radius: PxToEm($form--border-radius);
+
+	&__input-text {
+		@include form-input-text-size;
+		@include form-input-text-font;
+		@include form-input-text-border;
+
+		background: $form-input-text--background;
+
+		&:focus {
+			outline: 0;
+		}
+
+		&::placeholder {
+			color: $input-text--placeholder-color;
+		}
+	}
+}
