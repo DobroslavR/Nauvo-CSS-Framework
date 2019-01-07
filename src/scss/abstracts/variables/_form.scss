@@ -1,32 +1,42 @@
 //
-// Form settings
+// Form - settings
 //
 
 // Form - border settings
 
 $form--border-radius: 5 !default;
 
+//
+// Form input - settings
+//
+
 // Form input - size settings
 
-$form-input-text--padding-x: 12 !default;
-$form-input-text--padding-y: 8 !default;
+$form-input-text--padding-x: 16 !default;
+$form-input-text--padding-y: 12 !default;
 
 // Form input - border settings
 
 $form-input-text--border-size: 2 !default;
-$form-input-text--border-type: solid !default;
+$form-input-text--border-style: solid !default;
 $form-input-text--border-radius: 5 !default;
+$form-input-text--border-color: $color--black !default;
 
 // Form input - text settings
 
 $form-input-text--font-size: 12 !default;
 $form-input-text--font-family: 'Open sans' !default;
 $form-input-text--font-weight: 400 !default;
+$form-input-text--text-color: $color--light !default;
 
 // Form input - background settings
 
 $form-input-text--background: none !default;
 
-$form-input-text--border-color: $color-black !default;
-$form-input-text--text-color: $color-text-light !default;
-$input-text--placeholder-color: $color-text-light !default;
+// Form input - transition settings
+
+$form-input-text--transition: all 0.35s ease-in-out !default;
+
+// Form input - placeholder settings
+
+$form-input-text--placeholder-color: $color--light !default;

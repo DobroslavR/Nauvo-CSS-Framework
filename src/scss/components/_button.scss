@@ -4,16 +4,16 @@
 
 .btn {
 	display: inline-block;
-	font-family: $btn-font-family;
-	font-weight: $btn-font-weight;
-	font-size: PxToRem($btn-font-size);
-	line-height: $btn-line-height;
+	font-family: $btn--font-family;
+	font-weight: $btn--font-weight;
+	font-size: PxToRem($btn--font-size);
+	line-height: $btn--line-height;
 	text-align: center;
 	vertical-align: middle;
 	user-select: none;
 	background-color: transparent;
-	border: PxToEm($btn-border-width, $btn-font-size) solid transparent;
-	transition: $btn-transition;
+	border: PxToEm($btn--border-width, $btn--font-size) solid transparent;
+	transition: $btn--transition;
 	text-transform: uppercase;
 	cursor: pointer;
 
@@ -30,11 +30,11 @@
 	}
 
 	&--rounded-sm {
-		border-radius: PxToEm($btn-border-radius-sm, $btn-font-size);
+		border-radius: PxToEm($btn--border-radius-sm, $btn--font-size);
 	}
 
 	&--rounded-lg {
-		border-radius: PxToEm($btn-border-radius-lg, $btn-font-size);
+		border-radius: PxToEm($btn--border-radius-lg, $btn--font-size);
 	}
 
 	// Button elements
@@ -42,8 +42,8 @@
 	// Styling for elements, which are inside of button
 
 	&__icon {
-		margin-right: PxToEm(20, $btn-font-size);
-		margin-left: PxToEm(-20, $btn-font-size);
+		margin-right: PxToEm(20, $btn--font-size);
+		margin-left: PxToEm(-20, $btn--font-size);
 	}
 }
 

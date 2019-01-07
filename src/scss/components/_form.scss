@@ -6,18 +6,29 @@
 	border-radius: PxToEm($form--border-radius);
 
 	&__input-text {
-		@include form-input-text-size;
-		@include form-input-text-font;
-		@include form-input-text-border;
+		@include form-input-text--size;
+		@include form-input-text--font;
+		@include form-input-text--border;
+		@include form-input-text--autocomplete-settings;
 
 		background: $form-input-text--background;
+		transition: $form-input-text--transition;
+
+		&:required:valid {
+			border-color: $color--green;
+		}
 
 		&:focus {
 			outline: 0;
+			border-color: lighten($form-input-text--border-color, 10%);
+
+			&:required:invalid {
+				border-color: $color--red;
+			}
 		}
 
 		&::placeholder {
-			color: $input-text--placeholder-color;
+			color: $form-input-text--placeholder-color;
 		}
 	}
 }

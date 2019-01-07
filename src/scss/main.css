@@ -137,93 +137,6 @@ a {
   text-decoration: none;
 }
 
-/* ----------------------------------------------------------------------------------------------------
-
-Super Form Reset
-
-A couple of things to watch out for:
-
-- IE8: If a text input doesn't have padding on all sides or none the text won't be centered.
-- The default border sizes on text inputs in all UAs seem to be slightly different. You're better off using custom borders.
-- You NEED to set the font-size and family on all form elements
-- Search inputs need to have their appearance reset and the box-sizing set to content-box to match other UAs
-- You can style the upload button in webkit using ::-webkit-file-upload-button
-- ::-webkit-file-upload-button selectors can't be used in the same selector as normal ones. FF and IE freak out.
-- IE: You don't need to fake inline-block with labels and form controls in IE. They function as inline-block.
-- By turning off ::-webkit-search-decoration, it removes the extra whitespace on the left on search inputs
-
-----------------------------------------------------------------------------------------------------*/
-/* input,
-label,
-select,
-button,
-textarea {
-	margin: 0;
-	border: 0;
-	padding: 0;
-	display: inline-block;
-	vertical-align: middle;
-	white-space: normal;
-	background: none;
-	line-height: 1;
-} */
-/* Button Controls
------------------------------------------------*/
-input[type='checkbox'],
-input[type='radio'] {
-  width: 15px;
-  height: 15px;
-}
-
-/* File Uploads
------------------------------------------------*/
-/* Search Input
------------------------------------------------*/
-/* Make webkit render the search input like a normal text field */
-input[type='search'] {
-  -webkit-appearance: textfield;
-  -webkit-box-sizing: content-box;
-}
-
-/* Turn off the recent search for webkit. It adds about 15px padding on the left */
-::-webkit-search-decoration {
-  display: none;
-}
-
-/* Buttons
------------------------------------------------*/
-button,
-input[type='reset'],
-input[type='button'],
-input[type='submit'] {
-  /* Fix IE7 display bug */
-  overflow: visible;
-  width: auto;
-}
-
-/* IE8 and FF freak out if this rule is within another selector */
-::-webkit-file-upload-button {
-  padding: 0;
-  border: 0;
-  background: none;
-}
-
-/* Textarea
------------------------------------------------*/
-textarea {
-  /* Move the label to the top */
-  vertical-align: top;
-  /* Turn off scroll bars in IE unless needed */
-  overflow: auto;
-}
-
-/* Selects
------------------------------------------------*/
-select[multiple] {
-  /* Move the label to the top */
-  vertical-align: top;
-}
-
 html {
   font-size: 10px;
 }
@@ -426,7 +339,7 @@ body {
 
 .btn--outline-black {
   border-color: #122748;
-  color: #758db0;
+  color: #718093;
 }
 
 .btn--outline-black:hover {
@@ -591,25 +504,33 @@ body {
 .alert--success-light {
   color: #00b06c;
   background: #c9ffe5;
-  border: 0.16667em solid #00b06c;
+  border-width: 0.16667em;
+  border-style: solid;
+  border-color: #00b06c;
 }
 
 .alert--warning-light {
   color: #f69d35;
   background: #fff0cc;
-  border: 0.16667em solid #f69d35;
+  border-width: 0.16667em;
+  border-style: solid;
+  border-color: #f69d35;
 }
 
 .alert--error-light {
   color: #ff5063;
   background: #ffdbdb;
-  border: 0.16667em solid #ff5063;
+  border-width: 0.16667em;
+  border-style: solid;
+  border-color: #ff5063;
 }
 
 .alert--info-light {
   color: #13b5ea;
   background: #c9f2ff;
-  border: 0.16667em solid #13b5ea;
+  border-width: 0.16667em;
+  border-style: solid;
+  border-color: #13b5ea;
 }
 
 .form {
@@ -617,18 +538,37 @@ body {
 }
 
 .form__input-text {
-  padding: 0.66667em 1em;
+  padding: 1em 1.33333em;
   font-family: "Open sans";
   font-size: 1.2rem;
   font-weight: 400;
   color: #ffffff;
-  border: 0.16667em solid #122748;
+  border-width: 0.16667em;
   border-radius: 0.41667em;
+  border-style: solid;
+  border-color: #122748;
   background: none;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+.form__input-text:-webkit-autofill, .form__input-text:-webkit-autofill:hover, .form__input-text:-webkit-autofill:focus {
+  -webkit-text-fill-color: #ffffff;
+  -webkit-box-shadow: 0 0 0 50px #122748 inset;
+          box-shadow: 0 0 0 50px #122748 inset;
+}
+
+.form__input-text:required:valid {
+  border-color: #00b06c;
 }
 
 .form__input-text:focus {
   outline: 0;
+  border-color: #1c3d71;
+}
+
+.form__input-text:focus:required:invalid {
+  border-color: #ff5063;
 }
 
 .form__input-text::-webkit-input-placeholder {

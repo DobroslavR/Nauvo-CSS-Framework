@@ -6,7 +6,7 @@
 	$background,
 	$hover-background: lighten($background, 5%)
 ) {
-	color: #ffffff;
+	color: $color--light;
 	background: $background;
 
 	&:hover {
@@ -17,5 +17,7 @@
 @mixin alert-variant-light($color, $background) {
 	color: $color;
 	background: $background;
-	border: PxToEm(2, $alert-text-font-size) solid $color;
+	border-width: PxToEm($alert--border-size, $alert-text--font-size);
+	border-style: $alert--border-style;
+	border-color: $color;
 }

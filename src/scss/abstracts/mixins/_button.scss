@@ -21,14 +21,14 @@
 @mixin button-variant-outline($color, $hover-background: $color) {
 	border-color: $color;
 
-	@if ($color == $color-black) {
-		$color: #758db0;
+	@if ($color == $color--black) {
+		$color: $color--grey;
 	}
 
 	color: $color;
 
 	&:hover {
-		color: #ffffff;
+		color: $color--light;
 		background: $hover-background;
 	}
 }
@@ -41,7 +41,7 @@
 	align-items: center;
 	color: #ffffff;
 	background: $background;
-	letter-spacing: PxToEm(2, $btn-font-size);
+	letter-spacing: PxToEm(2, $btn--font-size);
 	@include button-size-lg;
 
 	&:hover {
@@ -54,11 +54,11 @@
 //
 
 @mixin button-size-lg {
-	padding: PxToEm($btn-padding-y-large, $btn-font-size)
-		PxToEm($btn-padding-x-large, $btn-font-size);
+	padding: PxToEm($btn--padding-y-large, $btn--font-size)
+		PxToEm($btn--padding-x-large, $btn--font-size);
 }
 
 @mixin button-size-sm {
-	padding: PxToEm($btn-padding-y-small, $btn-font-size)
-		PxToEm($btn-padding-x-small, $btn-font-size);
+	padding: PxToEm($btn--padding-y-small, $btn--font-size)
+		PxToEm($btn--padding-x-small, $btn--font-size);
 }

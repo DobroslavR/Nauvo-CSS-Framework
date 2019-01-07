@@ -4,31 +4,31 @@
 
 .alert {
 	width: 100%;
-	padding: PxToEm($alert-padding-y) PxToEm($alert-padding-x);
+	padding: PxToEm($alert--padding-y) PxToEm($alert--padding-x);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	font-weight: $alert-text-font-weight;
-	font-family: $alert-text-font-family;
-	border-radius: PxToEm($alert-border-radius);
+	font-weight: $alert-text--font-weight;
+	font-family: $alert-text--font-family;
+	border-radius: PxToEm($alert--border-radius);
 	text-transform: uppercase;
-	transition: $alert-transition;
+	transition: $alert--transition;
 
 	&__text {
-		font-size: PxToRem($alert-text-font-size);
-		line-height: $alert-text-line-height;
-		letter-spacing: PxToEm($alert-text-letter-spacing);
+		font-size: PxToRem($alert-text--font-size);
+		line-height: $alert-text--line-height;
+		letter-spacing: PxToEm($alert-text--letter-spacing);
 	}
 
 	&__link {
-		font-weight: $alert-link-font-weight;
+		font-weight: $alert-link--font-weight;
 		text-decoration: underline;
 	}
 
 	&__close {
 		color: inherit;
 		cursor: pointer;
-		font-size: PxToRem($alert-close-icon-font-size);
+		font-size: PxToRem($alert-close-icon--font-size);
 	}
 }
 
