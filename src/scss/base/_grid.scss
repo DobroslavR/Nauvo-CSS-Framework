@@ -1,0 +1,78 @@
+//
+// Grid
+//
+
+// Full width container
+
+.container {
+	width: 100%;
+}
+
+// Fluid container
+
+.container-fluid {
+	max-width: PxToEm($grid-container-fluid--width);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+// Row
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+// Column
+
+.col {
+	@include grid-column--basic-settings;
+}
+
+// Column width modifiers
+//
+// Loop, which creates column width modifiers
+// Each class created by this loop modify width of basic ".col" class
+
+@for $i from 1 to 13 {
+	.col--#{$i} {
+		@include grid-column--size($i);
+	}
+}
+
+@for $i from 1 to 13 {
+	.col--sm-#{$i} {
+		@include mq(sm, max) {
+			@include grid-column--size($i);
+		}
+	}
+}
+
+// Basic flex class for display content in flex
+
+.flex {
+	display: flex;
+}
+
+// Column order modifiers
+//
+// Loop, which creates flex order modifiers
+// Each class can set order of column in grid
+
+@for $i from 1 to 13 {
+	.flex--order-#{$i} {
+		@include grid-column--order($i);
+	}
+}
+
+// Column offset modifiers
+//
+// Loop, which creates flex offset modifiers
+// Each class can set column offset in grid
+
+@for $i from 1 to 13 {
+	$j: 13 - $i;
+	.flex--offset-#{$i} {
+		@include grid-column--offset($j);
+	}
+}

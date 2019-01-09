@@ -1,0 +1,30 @@
+// Grid mixins
+//
+//
+
+// Grid column - basic settings
+
+@mixin grid-column--basic-settings {
+	flex-basis: 0;
+	flex-grow: 1;
+	max-width: 100%;
+}
+
+// Grid column - size
+
+@mixin grid-column--size($number-of-column) {
+	flex: 0 0 100% / $number-of-column;
+	max-width: 100% / $number-of-column;
+}
+
+// Grid column - order
+
+@mixin grid-column--order($number-of-column) {
+	order: $number-of-column;
+}
+
+// Grid column - offset
+
+@mixin grid-column--offset($number-of-column) {
+	margin-left: 100% / $number-of-column;
+}
